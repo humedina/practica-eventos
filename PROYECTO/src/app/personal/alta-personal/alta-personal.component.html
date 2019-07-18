@@ -1,0 +1,63 @@
+<div class="col-xs-12 col-sm-12 col-md-12 panel-content-div">
+  <div class="backBODY"></div>
+  <div class="col-12 panel-content-title text-center">
+    <span class="title_30">Registro de Clientes</span>
+  </div>
+
+  <div class="col-12">
+    <form (ngSubmit)="enviarPeticion()">
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Nombre</label>
+        <input type="text" #nombre [(ngModel)]="altaPersonal.firstName" id="nombre" name="nombre" placeholder="Nombre del Cliente"
+          class="col-xs-12 col-sm-12 col-md-12 col-lg-8 form-control text-uppercase no-specials" value="">
+      </div>
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Apellido Paterno
+        </label>
+        <input type="text" #apPaterno [(ngModel)]="altaPersonal.lastName" id="apPaterno" name="apPaterno" placeholder="Apellido Paterno del Cliente"
+          class="col-xs-12 col-sm-12 col-md-12 col-lg-8 form-control text-uppercase no-specials" value="">
+      </div>
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Apellido Materno
+        </label>
+        <input type="text" #apMaterno [(ngModel)]="altaPersonal.motherLastName" id="apMaterno" name="apMaterno" placeholder="Apellido Materno del Cliente"
+          class="col-xs-12 col-sm-12 col-md-12 col-lg-8 form-control text-uppercase no-specials" value="">
+      </div>
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Edad
+        </label>
+        <input type="text" #edad [(ngModel)]="altaPersonal.age" id="edad" name="edad" placeholder="Edad del Cliente" class="col-xs-12 col-sm-12 col-md-12 col-lg-8 form-control text-uppercase no-specials"
+          value="">
+      </div>
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Email:
+        </label>
+        <input type="text" #email [(ngModel)]="altaPersonal.email" id="email" name="email" placeholder="Email del Cliente" class="col-xs-12 col-sm-12 col-md-12 col-lg-8 form-control text-uppercase no-specials"
+          value="">
+      </div>
+      <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-3">Producto</label>
+        <select type="text" #producto [(ngModel)]="altaPersonal.idProduct" id="producto" name="producto" placeholder="Producto" class="col-xs-12 col-sm-12 col-md-12 col-lg-4 form-control text-uppercase no-specials"
+          style="height: 30px;">
+          <option value="0">Seleccione</option>
+          <option value="1">AUTO</option>
+          <option value="2">TOUR</option>
+	  <option value="3">COMIDAS</option>
+        </select>
+      </div>
+
+
+      <div class="col-xs-12 col-md-12 py-3">
+        <button type="submit" name="enviar" id="enviar" style="display:none;"></button>
+        <label for="enviar" class="btn btn-success col-xs-12 col-sm-12 col-lg-2 float-right" style="margin: 7px;">
+          <i class="fa fa-check" aria-hidden="true"></i> Guardar
+        </label>
+        <a href="#">
+          <span class="btn btn-danger col-xs-12 col-sm-12 col-lg-2 float-right" style="margin: 7px;">
+            <i class="fa fa-trash" aria-hidden="true"></i> Cancelar
+          </span>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.sidebar{
+    background-color: #252b31;
+}
+
+.sidebar .list-group-item{
+    background: none;
+    color: white;
+    border-color: rgba(4,176,174,0.07);
+    font-size: 1.2rem;
+}
+
+.sidebar .list-group-item i{
+    color: #04B4AE;
+    font-size: 1.4rem;
+}
+
+.sidebar a:not([href]):not([tabindex]) {
+    color: #04B4AE!important;
+    cursor: pointer;
+    text-decoration: none;
+}
